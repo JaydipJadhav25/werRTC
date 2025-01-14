@@ -45,6 +45,29 @@ io.on('connection' , socket =>{
         io.to(socket.id).emit("user:join" , {email , room});
 
 
+        //handle usr call 
+        socket.on("user:call" , (data)=>{
+            const{to , offer} = data;
+            //send user
+            io.to(to).emit("incoming:call" , {form : socket.id , offer});
+
+        });
+
+       socket.on("accecpted:call" , ({to , ans})=>{
+        //send to user
+        io.to(to).emit("accecpted:call" , {form : socket.id , ans});
+       })  
+ 
+        //
+        socket.on("peer:nego" , (data)=>{
+            const {to  , offer} = data;
+            io.to(to).emit("peer:nego" , { form : socket.id , offer});
+        });
+
+        socket.on("peer:nego:done" , ({to , ans})=>{
+            io.to(to).emit("peer:nego:done" , { form : socket.id , ans});
+        });
+
 
     })
 
