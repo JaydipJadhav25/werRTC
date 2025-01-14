@@ -1,0 +1,50 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.conatiner{
+  /* background-color: aqua; */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+input{
+  display: block;
+  padding: 10px 20px 20px;
+  margin: 10px;
+  border-radius: 20px;
+  font-family: 'Times New Roman', Times, serif;
+   font-style: italic;
+   font-size: x-large;
+ 
+}
+
+button{
+  background-color: blue;
+  color: wheat;
+  padding: 20px;
+  /* margin-right: 90px; */
+  margin: 20px;
+}
+
+input:hover{
+  border: 2px white solid;
+  background-color: yellow;
+}
